@@ -1,0 +1,50 @@
+/* pages/addLog/addLog.wxss */
+
+.add-log-page {
+  padding: 10px;
+}
+
+.add-log-page picker {
+  display: inline-block;
+  width: 54%;
+}
+.add-log-item ~ .add-log-item {
+  margin-top: 8px;
+}
+
+.add-log-item text {
+  display: inline-block;
+  width: 36%;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.add-log-item text::before {
+  content: '*';
+  margin-right: 4px;
+  color: red;
+}
+
+.add-log-item input,
+.add-log-item textarea {
+  display: inline-block;
+  width: 56%;
+  vertical-align: middle;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px 8px;
+}
+.add-log-item picker input {
+  width: 100%;
+}
+.add-log-item textarea {
+  vertical-align: top;
+
+}
+.btns {
+  margin-top: 16px;
+  text-align: center;
+}
+.btns button {
+  margin: 0 10px;
+}

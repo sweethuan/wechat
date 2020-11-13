@@ -1,0 +1,4 @@
+<view class="wrap {{isShow?'show':''}}" >
+   <icon type="{{iconType}}" />
+   <text>{{text}}</text>
+</view>

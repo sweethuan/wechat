@@ -1,0 +1,70 @@
+<!--pages/personalSettings/personalSettings.wxml-->
+
+<view class="container">
+  <!-- <view bindtap="goHome">跳转到首页</view> -->
+  <!-- <navigator url="/pages/login/login" hover-class="navigator-hover"> </navigator> -->
+  <view class="header">
+    <view class="avatar">
+      <!-- <image src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=19012935,4288834755&fm=111&gp=0.jpg"></image> -->
+      <image src="{{userData.icon}}" bindtap="openConfirm1"></image>
+    </view>
+    <view class="userName">
+      <view>{{userData.userName}}</view>
+    </view>
+    <view class="updata-psw iconfont icon-edit" bindtap="openConfirm2">修改密码</view>
+  </view>
+  <view class="persData">
+    <view class="title">个人资料
+    </view>
+    <view>姓名
+      <text>{{userData.userName}}</text>
+    </view>
+    <view>账号
+      <text>{{userData.account}}</text>
+    </view>
+    <view>部门
+      <text>{{userData.orgName}}</text>
+    </view>
+    <view bindtap="gogogo">编号
+      <text>{{userData.userNo?userData.userNo:''}}</text>
+    </view>
+    <view data-flag='邮箱' bindtap="openConfirm">邮箱
+      <text>{{userData.eMail?userData.eMail:''}}</text>
+      <text class="fr">></text>
+    </view>
+    <view data-flag='手机' bindtap="openConfirm">手机
+      <text>{{userData.phoneNum?userData.phoneNum:''}}</text>
+      <text class="fr">></text>
+    </view>
+  </view>
+  <!-- 修改邮箱/手机 -->
+  <mp-dialog title="修改{{flag}}" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view>
+      <text>{{flag}}</text>
+      <input class="changeMsg" bindinput="inputedit" value="{{flag=='邮箱'?userData.eMail:userData.phoneNum}}"></input>
+    </view>
+  </mp-dialog>
+  <!-- 修改头像 -->
+  <mp-dialog title="修改头像" show="{{dialogShow1}}" bindbuttontap="tapDialogButton1" buttons="{{buttons}}">
+    <view class="change-avatar">
+      <image src="{{tempAvatar}}" bindtap="changeavatr"></image>
+    </view>
+  </mp-dialog>
+  <!-- 修改密码 -->
+  <mp-dialog title="修改密码" show="{{dialogShow2}}" bindbuttontap="tapDialogButton2" buttons="{{buttons}}">
+    <view class="change-pwd">
+      <view>
+        <text>旧密码</text>
+        <input class="changeMsg" placeholder-class="phcolor" bindinput="inputedit1" value="{{oldPwd}}" placeholder="请输入旧密码"></input>
+      </view>
+      <view class="new-pwd">
+        <text>新密码</text>
+        <input class="changeMsg" placeholder-class="phcolor" bindinput="inputedit2" value="{{newPwd}}" placeholder="请输入新密码"></input>
+      </view>
+      <view>
+        <text>确认密码</text>
+        <input class="changeMsg" placeholder-class="phcolor" bindinput="inputedit3" value="{{againPwd}}" placeholder="请确认密码"></input>
+      </view>
+    </view>
+  </mp-dialog>
+</view>

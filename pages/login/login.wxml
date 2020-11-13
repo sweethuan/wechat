@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo"> 
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <!-- <mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消'}, {text: '确认'}]}}">
+    <view>test content</view>
+   </mp-dialog> -->
+  <form class="loginForm" bindsubmit="formSubmit" bindreset="formReset">
+    <view class="list">
+      <icon slot="icon" class="iconfont icon-icon " ></icon>
+      <text class="cancel"  wx:if="{{isUserNameCancel}}">用户名不能为空</text>
+      <input class="login-input" id="userName" auto-focus bindinput="inputChange" value="{{formData.userName}}" placeholder="请输入用户名" />
+    </view>
+    <view class="list">
+      <icon slot="icon" class="iconfont icon-mima " ></icon>
+      <text class="cancel" wx:if="{{isPasswordCancel}}">密码不能为空</text>
+      <input class="login-input" id="password" bindinput="inputChange" password value="{{formData.password}}" placeholder="请输入密码" />
+    </view>
+      <button class="weui-btn submit" type="primary" bindtap="submitForm">登录</button>
+  </form>
+
+  <!-- <mp-form id="form" rules="{{rules}}" models="{{formData}}"> -->
+  <!-- <mp-cells>
+      <mp-cell prop="username" title="" ext-class="">
+        <icon slot="icon" class="iconfont icon-icon " style="margin-right: 16px"></icon> 
+        <input class="weui-input" placeholder="请输入用户名" />  
+      </mp-cell>
+       <mp-cell prop="password" title="" ext-class="">
+       <icon slot="icon" class="iconfont icon-mima " style="margin-right: 16px"></icon> 
+        <input password="true"  class="weui-input" placeholder="请输入密码" />
+      </mp-cell>
+    </mp-cells> -->
+  <!-- <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">登录</button>
+      </view> -->
+  <!-- </mp-form> -->
+</view>

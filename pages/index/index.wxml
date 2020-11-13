@@ -1,0 +1,38 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<view class="container">
+  <!-- 新增悬浮按钮 -->
+  <view class="fixed_menu" bindtap="goaddLog">
+    <icon class="iconfont icon-jia1"></icon>
+  </view>
+  <!-- 操作反馈弹窗 -->
+  <custom-msg id="customMsg" :whereFrom="whereFrom"></custom-msg>
+  <!-- 顶部菜单栏 -->
+  <view class="header_top">
+    <view class="list" bindtap="sortDate">工作日期 
+      <icon class="iconfont icon-paixu3-copy"></icon>
+    </view>
+    <!-- <view class="list">所属项目
+      <icon class="iconfont icon-xiala"></icon>
+    </view> -->
+    <view class="list" bindtap="screen">筛选
+      <icon class="iconfont icon--filter"></icon>
+    </view>
+    <!-- 筛选模块 -->
+    <screen-model bind:changFormData='changFormData' id="screenModel"></screen-model>
+  </view>
+  <!-- 内容区域 -->
+  <view class="content">
+    <view class="list" wx:for="{{tableList}}" wx:key="key" data-item="{{item}}" bindtap="goDetailLog">
+      <view class="top">
+        <text class="txt txt1">姓名: {{item.userName}}</text>
+        <text class="txt txt2">用时: {{item.xhsc}}小时</text>
+        <view class="txt3 txt">工作日期: {{item.gzrq}}</view>
+      </view>
+      <view class="txt4 txts">所属项目: {{item.ssxm}}</view>
+      <view class="txt5 txts">工作内容: {{item.gznr}}</view>
+    </view>
+  </view>
+  
+
+</view>

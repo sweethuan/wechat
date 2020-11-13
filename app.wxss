@@ -1,0 +1,88 @@
+/**app.wxss**/
+@import './weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+@import "./static/font/iconfont.wxss";
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  font-size: 24rpx;
+} 
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clear::after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1997620 */
+  src: url('http://at.alicdn.com/t/font_1997620_bti31l3bucr.eot');
+  src: url('http://at.alicdn.com/t/font_1997620_bti31l3bucr.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_1997620_bti31l3bucr.woff2') format('woff2'),
+  url('http://at.alicdn.com/t/font_1997620_bti31l3bucr.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_1997620_bti31l3bucr.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_1997620_bti31l3bucr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit:before {
+  content: "\e611";
+}
+
+.icon-huifu1:before {
+  content: "\e745";
+}
+
+.icon-chakantiezihuifu:before {
+  content: "\e663";
+}
+
+.icon-huifu:before {
+  content: "\e717";
+}
+
+.icon-buoumaotubiao17:before {
+  content: "\e62e";
+}
+
+.icon-iconfontzhizuobiaozhun023148:before {
+  content: "\e696";
+}
+
+.icon-shoucang:before {
+  content: "\e64f";
+}
+
+.icon-lujing:before {
+  content: "\e621";
+}
+
+.icon-xingming1:before {
+  content: "\e601";
+}
+
+.icon-xingmingyonghumingnicheng:before {
+  content: "\e651";
+}
+
+.icon-mima:before {
+  content: "\e605";
+}
+

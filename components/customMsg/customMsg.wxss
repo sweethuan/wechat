@@ -1,0 +1,27 @@
+/* components/customMsg/customMsg.wxss */
+.wrap{
+  display: inline-block;
+  position: fixed;
+  padding:10rpx 20rpx;
+  line-height: 40rpx;
+  box-shadow: 0 0 5px #666666;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 9999;
+}
+.wrap.show{
+  top: 100px;     
+  opacity: 1;
+}
+.wrap icon{
+  font-size: 40rpx;
+  padding-right: 10rpx;
+}
+.wrap text{
+   font-size: 16px;
+}

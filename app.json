@@ -1,0 +1,48 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/personalSettings/personalSettings",
+    "pages/logs/logs",
+    "components/customMsg/customMsg",
+    "components/screenModel/screenModel",
+    "pages/detailLog/detailLog",
+    "pages/addLog/addLog",
+    "pages/emoji/emoji"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00608A",
+    "navigationBarTitleText": "日志管理",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./static/img/icon.jpg",
+        "selectedIconPath": "./static/img/icon.jpg",
+        "text": "日志管理"
+      },
+      {
+        "pagePath": "pages/personalSettings/personalSettings",
+        "iconPath": "./static/img/icon1.jpg",
+        "selectedIconPath": "./static/img/icon1.jpg",
+        "text": "个人设置"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mp-toptips": "./weui-miniprogram/toptips/toptips",
+    "mp-cells": "./weui-miniprogram/cells/cells",
+    "mp-cell": "./weui-miniprogram/cell/cell",
+    "mp-checkbox": "./weui-miniprogram/checkbox/checkbox",
+    "mp-checkbox-group": "./weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-form": "./weui-miniprogram/form/form",
+    "mp-dialog": "./weui-miniprogram/dialog/dialog",
+    "custom-msg": "./components/customMsg/customMsg"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

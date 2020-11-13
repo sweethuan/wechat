@@ -1,0 +1,63 @@
+<view class="screen_wrap">
+  <view class="screen_content">
+    <view class="box {{isShow?'show':''}}">
+      <form class="screenForm" bindsubmit="formSubmit" bindreset="formReset">
+        <view class="registrant list">
+          <view class="section__title">登记人：</view>
+          <picker mode="selector" class="form_pick" value="{{index}}" range-key="userName" bindchange="changeR" range="{{userNameData}}">
+            <view class="weui-input">{{whereForm.userName?whereForm.userName:'全部'}}</view>
+            <icon class="iconfont icon-xiala"></icon>
+          </picker>
+        </view>
+        <view class="registrant list">
+          <view class="section__title">开始工作日期：</view>
+          <picker mode="date" class="form_pick" value="{{date}}" bindchange="bindStartDateChange">
+            <view class="picker">{{whereForm.gzrqStart?whereForm.gzrqStart:'请选择'}} </view>
+            <icon class="iconfont icon-xiala"></icon>
+          </picker>
+        </view>
+        <view class="registrant list">
+          <view class="section__title">结束工作日期：</view>
+          <picker mode="date" class="form_pick" value="{{date}}" bindchange="bindEndDateChange">
+            <view class="picker">{{whereForm.gzrqEnd?whereForm.gzrqEnd:'请选择'}} </view>
+            <icon class="iconfont icon-xiala"></icon>
+          </picker>
+        </view>
+        <view class="registrant list">
+          <view class="section__title">所属项目：</view>
+          <picker mode="selector" class="form_pick" value="{{index}}" range-key="itemName" bindchange="changeX" range="{{projectData}}">
+            <view class="weui-input">{{whereForm.ssxm?whereForm.ssxm:'全部'}}</view>
+            <icon class="iconfont icon-xiala"></icon>
+          </picker>
+        </view>
+        <view class="registrant list">
+          <view class="section__title">业务类型：</view>
+          <picker mode="selector" class="form_pick" value="{{index}}" range-key="itemName" bindchange="changeY" range="{{toSData}}">
+            <view class="weui-input">{{whereForm.ywlx?whereForm.ywlx:'全部'}}</view>
+            <icon class="iconfont icon-xiala"></icon>
+          </picker>
+        </view>
+        <view class="registrant list">
+          <view class="section__title">是否签约：</view>
+          <picker mode="selector" class="form_pick" value="{{index}}" range-key="value" bindchange="changeQ" range="{{signData}}">
+            <view class="weui-input">{{whereForm.sfsh===0?'请选择':whereForm.sfsh?'已签约':'未签约'}}</view>
+            <icon class="iconfont icon-xiala"></icon>
+          </picker>
+        </view>
+        <view class="btn-area">
+          <button formType="reset" size="mini" type="primary">重置</button>
+          <button formType="submit" size="mini" type="primary">查询</button>
+        </view>
+      </form>
+      <view class="bottom" bindtap="close">
+        <icon class="iconfont icon-shouqi"></icon>
+      </view>
+    </view>
+
+    <view class="meng" bindtap="close" wx:if="{{isShow}}"></view>
+  </view>
+
+</view>
+
+<!-- 操作反馈弹窗 -->
+<custom-msg id="customMsg"></custom-msg>

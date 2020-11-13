@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+      "screen-model": "../../components/screenModel/screenModel"
+  },
+  "navigationBarTitleText": "日志管理",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

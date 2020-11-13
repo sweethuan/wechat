@@ -1,0 +1,118 @@
+/* components/screenModel/screenModel.wxss */
+@import "../../static/font/iconfont.wxss";
+
+.screen_wrap {
+  position: absolute;
+  top: 62rpx;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 63rpx);
+  z-index: 9;
+  /* padding-bottom: 20px; */
+}
+
+.screen_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.screen_content .box{
+  position: relative;
+  top: -720rpx;
+  transition: 0.5s;
+  opacity: 0;
+}
+.screen_content .box.show{
+  top: 0;
+  opacity: 1;
+}
+.screen_content .meng {
+  width: 100%;
+ height: calc(100vh - 63rpx);
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.screen_wrap form {
+  background: white;
+  padding-top: 20rpx;
+}
+
+.section__title {
+  width: 178rpx;
+  font-size: 24rpx;
+}
+
+.form_pick {
+  width: 310rpx;
+  border-bottom: 1px solid #0081ba;
+  text-align: center;
+  position: relative;
+}
+
+.form_pick icon {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  /* color: #666666; */
+}
+
+.screenForm {
+  /* width: 640rpx;
+  margin: 20rpx auto 0; */
+  width: 100%;
+  display: block;
+}
+
+.screenForm .list {
+  display: flex;
+  margin: 0 auto 20rpx;
+  width: 488rpx;
+}
+
+.btn-area {
+  display: flex;
+  width: 488rpx;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.btn-area button {
+  padding: 0 24px;
+  /* float: right;
+  margin-left: 10px; */
+}
+
+.screen_wrap .bottom {
+  text-align: center;
+  line-height: 30px;
+  background: #f0f0f0;
+  /* padding-top: 10px; */
+}
+
+.screen_wrap .bottom icon {
+  font-size: 40rpx;
+  position: relative;
+ /* animation-name: shouqi;
+    animation-duration: 2s;
+    animation-timing-function: linear; */
+    animation: shouqi 1.5s infinite; 
+  top: 10rpx;
+}
+
+@keyframes shouqi {
+  0% {
+    top: 5rpx;
+  }
+   50% {
+    top: -5rpx;
+  }
+   100% {
+    top: 5rpx;
+  }
+}

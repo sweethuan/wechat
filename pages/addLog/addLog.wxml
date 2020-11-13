@@ -1,0 +1,38 @@
+<!--pages/addLog/addLog.wxml-->
+<view class="add-log-page">
+  <view class="add-log-item">
+    <text>工作日期</text>
+    <picker mode="date" value="{{addLogData.gzrq}}" end="{{today}}" bindchange="bindDateChange">
+      <input disabled value="{{addLogData.gzrq?addLogData.gzrq:'请选择'}}"></input>
+    </picker>
+  </view>
+  <view class="add-log-item">
+    <text>所属项目</text>
+    <picker mode="selector" value="{{index}}" range-key="itemName" bindchange="changeX" range="{{projectData}}">
+      <input disabled value="{{addLogData.ssxm?addLogData.ssxm:'请选择'}}"></input>
+    </picker>
+  </view>
+  <view class="add-log-item">
+    <text>业务类型</text>
+    <picker mode="selector" value="{{index}}" range-key="itemName" bindchange="changeY" range="{{toSData}}">
+      <input disabled value="{{addLogData.ywlx?addLogData.ywlx:'请选择'}}"></input>
+    </picker>
+  </view>
+  <view class="add-log-item">
+    <text>消耗时长(小时)</text>
+    <input type="digit" bindinput="changeSC" value="{{addLogData.xhsc}}" placeholder="请输入"></input>
+  </view>
+  <view class="add-log-item">
+    <text>完成进度(%)</text>
+    <input type="number" bindinput="changeJD" value="{{addLogData.wcjd}}" placeholder="请输入"></input>
+  </view>
+  <view class="add-log-item">
+    <text>工作内容</text>
+    <textarea value="{{addLogData.gznr}}" bindinput="bindinput" placeholder="请输入"></textarea>
+  </view>
+  <view class="btns">
+    <button size="mini" type="primary" bindtap="goHome">返回</button>
+    <button size="mini" type="primary" bindtap="reset">重置</button>
+    <button size="mini" type="primary" bindtap="sava">保存</button>
+  </view>
+</view>

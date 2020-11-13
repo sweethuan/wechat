@@ -1,0 +1,112 @@
+/* pages/index/index.wxss */
+
+page {
+  background: #f0f0f0;
+}
+
+/* 悬浮按钮 */
+
+.fixed_menu {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /* border: 1px solid #3385ff; */
+  line-height: 50px;
+  text-align: center;
+  z-index: 999;
+  background: rgba(51, 133, 255, .7);
+}
+
+.fixed_menu .iconfont {
+  font-size: 30px;
+  margin-top: -4px;
+  color: white;
+  /* display: inline; */
+}
+
+/* 顶部栏 */
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  background: #f0f0f0;
+
+}
+
+.header_top .list {
+  /* width: 33.3%; */
+  flex: 1;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-bottom: 1px solid #666;
+}
+.header_top .list ~ .list {
+  border-left: 1px solid #666;
+}
+
+
+.header_top .list .iconfont {
+  font-size: 36rpx;
+}
+
+/* 内容区域 */
+
+.content {
+  display: block;
+  width: 720rpx;
+  margin: 70rpx auto 0;
+  position: relative;
+}
+
+.content .list {
+  width: 700rpx;
+  /* margin-left: 3%; */
+  background: white;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  border: 1px solid #e8eaec;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.2);
+}
+
+.content .list .top {
+  display: flex;
+  justify-content: space-between;
+  height: 48rpx;
+}
+
+.content .list .top .txt {
+  /* width: 33.33%; */
+  line-height: 48rpx;
+}
+
+/* .content .list .top .txt1{
+  text-align: left;
+}
+.content .list .top .txt3{
+  text-align: right;
+} */
+
+.content .list .txts {
+  line-height: 48rpx;
+}
+
+.content .list .txt5 {
+  width: 100%;
+  line-height: 40rpx;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

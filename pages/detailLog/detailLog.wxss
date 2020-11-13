@@ -1,0 +1,29 @@
+/* pages/detailLog.wxss */
+.detail-page {
+  padding: 10px;
+}
+.detail-item ~ .detail-item {
+  margin-top: 10px;
+}
+.detail-item text {
+  display: inline-block;
+  width: 110px;
+  text-align: right;
+}
+.detail-item input,
+.detail-item textarea {
+  display: inline-block;
+  width: 180px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  height: 32px;
+  vertical-align: middle;
+  margin-left: 16px;
+  text-align: left;
+  padding: 0 10px;
+}
+.detail-item textarea {
+  min-height: 120px;
+  vertical-align: top;
+
+}

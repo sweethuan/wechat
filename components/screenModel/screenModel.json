@@ -1,0 +1,6 @@
+{
+  "component":true,
+  "usingComponents": {
+    "screen-model": "../screenModel/screenModel"
+  }
+}

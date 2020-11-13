@@ -1,0 +1,35 @@
+<!--日志详情页-->
+<view class="detail-page">
+  <view class="detail-item">
+    <text>登记人</text>
+    <input disabled value="{{detailData.userName}}"></input>
+  </view>
+  <view class="detail-item">
+    <text>工作日期</text>
+    <input disabled value="{{detailData.gzrq}}"></input>
+  </view>
+  <view class="detail-item">
+    <text>所属项目</text>
+    <input disabled value="{{detailData.ssxm}}"></input>
+  </view>
+  <view class="detail-item">
+    <text>业务类型</text>
+    <input disabled value="{{detailData.ywlx}}"></input>
+  </view>
+  <view class="detail-item">
+    <text>消耗时长(小时)</text>
+    <input disabled value="{{detailData.xhsc}}"></input>
+  </view>
+  <view class="detail-item">
+    <text>业务进度(%)</text>
+    <input disabled value="{{detailData.wcjd}}"></input>
+  </view>
+  <view class="detail-item">
+    <text>工作内容</text>
+    <textarea disabled auto-height value="{{detailData.gznr}}"></textarea>
+  </view>
+  <view class="detail-item">
+    <text>签约意见</text>
+    <textarea disabled auto-height value="{{detailData.shyj}}"></textarea>
+  </view>
+</view>
