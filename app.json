@@ -10,6 +10,7 @@
     "pages/detailLog/detailLog",
     "pages/addLog/addLog",
     "pages/emoji/emoji"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
